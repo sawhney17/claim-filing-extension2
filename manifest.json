@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Form Auto-Filler",
+    "version": "1.0",
+    "description": "Automatically fills forms on websites based on predefined goals",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage",
+      "contextMenus"
+    ],
+    "host_permissions": [
+      "*://*.delta.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.delta.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }

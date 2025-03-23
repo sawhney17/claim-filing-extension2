@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Auto-Filler</title>
+  <style>
+    body {
+      width: 200px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #status {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .success { color: #4CAF50; }
+    .error { color: #f44336; }
+  </style>
+</head>
+<body>
+  <button id="fillFormButton">Fill Form</button>
+  <div id="status"></div>
+  <script>
+    console.log('Popup HTML loaded');
+  </script>
+  <script type="module" src="popup.js"></script>
+</body>
+</html> 
